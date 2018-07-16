@@ -1,8 +1,5 @@
 package pool;
 
-import com.mysql.cj.protocol.Resultset;
-
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +7,7 @@ import java.sql.SQLException;
 
 /**
  * Created by tiang on 2018/7/16.
+ * 测试数据库连接池是否能够使用
  */
 public class ConnectDB {
     public static void main(String[] args) {

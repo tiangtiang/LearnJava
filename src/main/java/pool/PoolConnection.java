@@ -11,6 +11,7 @@ import java.util.Properties;
 
 /**
  * Created by tiang on 2018/7/16.
+ * 数据库连接池类，使用单例模式
  */
 public class PoolConnection {
     private static DruidDataSource dataSource = null;
@@ -33,6 +34,10 @@ public class PoolConnection {
 
     private PoolConnection(){}
 
+    /**
+     * 获取数据库连接
+     * @return
+     */
     public Connection getConnection(){
         try {
             return dataSource.getConnection();
@@ -42,6 +47,10 @@ public class PoolConnection {
         }
     }
 
+    /**
+     * 创建一个连接池
+     * @return
+     */
     public static synchronized PoolConnection createPool(){
         if(pool == null)
             pool = new PoolConnection();
