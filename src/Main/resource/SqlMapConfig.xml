@@ -25,5 +25,6 @@
     <!-- 加载映射文件 -->
     <mappers>
         <mapper resource="ContractMapper.xml"/>
+        <mapper resource="mapper/SchoolMapper.xml"/>
     </mappers>
 </configuration>

@@ -12,14 +12,12 @@ import java.io.InputStream;
  * Created by tiang on 2018/7/16.
  */
 public class DataConnection {
-    private String resource = "/SqlMapConfig.xml";
-    private SqlSessionFactory factory;
-    private SqlSession session;
+    private static String resource = "SqlMapConfig.xml";
+    private static SqlSessionFactory factory;
 
-    public SqlSession getSqlSession() throws IOException {
-        InputStream inputStream = this.getClass().getResourceAsStream(resource);
+    public static SqlSession getSqlSession() throws IOException {
+        InputStream inputStream = Resources.getResourceAsStream(resource);
         factory = new SqlSessionFactoryBuilder().build(inputStream);
-        session = factory.openSession();
-        return session;
+        return factory.openSession();
     }
 }
