@@ -19,5 +19,6 @@ public class Test {
         SchoolMapper mapper = (SchoolMapper) context.getBean("schoolMapper");
         Student student = mapper.selectStudent(13);
         System.out.println(student.getStudentName());
+        System.out.println(student.getAge());
     }
 }

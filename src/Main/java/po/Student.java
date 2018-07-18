@@ -1,5 +1,9 @@
 package po;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 
 /**
@@ -12,6 +16,7 @@ public class Student {
     private String gender;
     private Date birthday;
     private int classId;
+    private int age;
 
     public int getStudentId() {
         return studentId;
@@ -51,5 +56,24 @@ public class Student {
 
     public void setClassId(int classId) {
         this.classId = classId;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public Student(Integer studentId, String studentName, String gender, java.sql.Date birthday, Integer classId) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.classId = classId;
+    }
+
+    public void calculateAge(){
+        LocalDate now = LocalDate.now();
+        LocalDate birth = ((java.sql.Date)birthday).toLocalDate();
+        Period p = Period.between(birth, now);
+        this.age = p.getYears();
     }
 }
