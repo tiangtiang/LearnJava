@@ -12,7 +12,7 @@ import java.io.InputStream;
  * Created by tiang on 2018/7/16.
  */
 public class DataConnection {
-    private static String resource = "SqlMapConfig.xml";
+    private static String resource = "mybatis/SqlMapConfig.xml";
     private static SqlSessionFactory factory;
 
     public static SqlSession getSqlSession() throws IOException {

@@ -1,4 +1,4 @@
-package dao;
+package mapper;
 
 import po.Student;
 
@@ -13,4 +13,5 @@ public interface SchoolMapper {
      * @return
      */
     int insertStudent(Student student);
+    Student selectStudent(int id);
 }
