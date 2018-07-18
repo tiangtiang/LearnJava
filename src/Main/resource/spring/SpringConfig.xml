@@ -25,7 +25,12 @@
         <property name="dataSource" ref="datasource"/>
     </bean>
     <!--创建一个mapper实现类-->
-    <bean id="school" class="dao.SchoolMapperImpl">
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    <!--<bean id="school" class="dao.SchoolMapperImpl">-->
+        <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
+    <!--</bean>-->
+    <!--代理mapper类，为每一个mapper.xml文件自动创建一个代理对象执行sql-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 </beans>

@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * Created by tiang on 2018/7/17.
+ * 学生实体对象
  */
 public class Student {
     private int studentId;

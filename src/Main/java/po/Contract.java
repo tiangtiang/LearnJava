@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * Created by tiang on 2018/7/16.
+ * 合同实体对象
  */
 public class Contract {
     private Integer orgID;

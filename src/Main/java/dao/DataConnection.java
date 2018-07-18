@@ -10,7 +10,9 @@ import java.io.InputStream;
 
 /**
  * Created by tiang on 2018/7/16.
+ * 原来的会话工厂类，引入spring之后由spring管理，现已不需要
  */
+@Deprecated
 public class DataConnection {
     private static String resource = "mybatis/SqlMapConfig.xml";
     private static SqlSessionFactory factory;

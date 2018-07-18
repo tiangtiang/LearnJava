@@ -4,7 +4,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--mapper定义-->
-<mapper namespace="test">
+<!--代理类-->
+<mapper namespace="mapper.SchoolMapper">
     <!--插入一个学生-->
     <insert id="insertStudent" parameterType="po.Student">
       INSERT INTO t_student (stu_id, stu_name, gender, birthday, class_id) VALUES (#{studentId},
